@@ -6,10 +6,10 @@ metadata:
 spec:
   members: 3
   type: ReplicaSet
-  version: "4.4.0" # Stellen Sie sicher, dass Sie die gewünschte MongoDB-Version hier angeben
+  version: "4.4.0"
   security:
     authentication:
-      enabled: true # Aktiviert die Authentifizierung
+      enabled: true 
       modes: ["SCRAM"]
   opsManager:
     configMapRef:

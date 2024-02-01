@@ -1,0 +1,17 @@
+apiVersion: mongodb.com/v1
+kind: MongoDB
+metadata:
+  name: hr-mongodb
+  namespace: mongodb
+spec:
+  members: 3
+  type: ReplicaSet
+  version: "4.4.0" # Stellen Sie sicher, dass Sie die gewünschte MongoDB-Version hier angeben
+  security:
+    authentication:
+      enabled: true # Aktiviert die Authentifizierung
+      modes: ["SCRAM"]
+  opsManager:
+    configMapRef:
+      name: ops-manager-connection
+  credentials: mongodb-admin-secret

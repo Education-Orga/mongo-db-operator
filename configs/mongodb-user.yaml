@@ -1,0 +1,11 @@
+apiVersion: mongodb.com/v1
+kind: MongoDBUser
+metadata:
+  name: hr-mongodb-user
+  namespace: mongodb
+spec:
+  username: "hruser"
+  db: "admin"
+  roles:
+    - name: "readWrite"
+      db: "hrdb"
